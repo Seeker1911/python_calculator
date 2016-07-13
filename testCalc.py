@@ -12,6 +12,7 @@ class TestCalculator(unittest.TestCase):
   @classmethod
   def setUpClass(self):
     print('Set up class')
+    pass
     # Create an instance of the calculator that can be used in all tests
 
   @classmethod
@@ -19,7 +20,20 @@ class TestCalculator(unittest.TestCase):
     print('Tear down class')
 
   def test_add(self):
-    self.assertEqual(self.calc.add(2, 7), 9)
+    calc = calculator.Calculator()
+    self.assertEqual(calc.add(2, 7), 9)
+
+  def test_subtract(self):
+    calc = calculator.Calculator()
+    self.assertEqual(calc.subtract(7, 2), 5)
+
+  def test_multiply(self):
+    calc = calculator.Calculator()
+    self.assertEqual(calc.multiply(7, 2), 14)
+
+  def test_divide(self):
+    calc = calculator.Calculator()
+    self.assertEqual(calc.divide(7, 2), 3.5)
 
   # Write test methods for subtract, multiply, and divide
 
